@@ -1,0 +1,99 @@
+// car details
+class Automobile
+{
+  String  maker;
+  String  identification;
+  float bluebook;
+  int year;
+  int passenger;
+  Automobile()
+  {
+     maker="toyato";
+     identification= "RS1675";
+     bluebook=9806;
+     year=2000;
+     passenger=4;
+  }
+}
+class Car extends Automobile
+{
+    boolean warrenty;
+    int doors;
+    boolean imported;
+    int topspeed;
+    String size;
+    String reardoor;
+    Car(boolean w,int ds,boolean imp,int ts,String s,String rd)
+    {
+        warrenty=w;
+        doors=ds;
+        imported=imp;
+        topspeed= ts;
+        size=s;
+        reardoor=rd;
+    }
+    public String toString()
+    {
+        return "MAKER MAME: " +maker+ " VEHICLE IDENTIFICATION NUMBER: " +identification+ " BLUEBOOK VALUE: "+bluebook+  " YEAR: "+year+"  PASSENGER: "+passenger+ " WARRENTY: " + warrenty + "DOORS: "+doors+ " IMPORTED: "+imported+ "TOPSPEED: "+topspeed+ "SIZE:" +size+ "REARDOOR:" +reardoor;
+    }
+}
+class Truck extends Automobile
+{
+    boolean topper;
+    String wheels;
+    int racks;
+    Truck( boolean to ,String ws,int r)
+    {
+        topper =to;
+        wheels=ws;
+        racks =r;
+    }
+    public String toString()
+    {
+        return "MAKER MAME: " +maker+ " VEHICLE IDENTIFICATION NUMBER: " +identification+  " BLUEBOOK VALUE: "+bluebook+  " YEAR: "+year+"  PASSENGER: "+passenger +" TOPPER:"+ topper + " WHEELS:"+wheels+ " RACKS: "+racks;
+    }
+}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Car c= new Car(true, 4, true,200,"medium"," hatchblack");
+        System.out.println(c);
+        Truck t= new Truck(false ,"off-road" ,2);
+        System.out.println(t);
+    }
+//bank details
+class Bank{
+int getBalance()
+{
+return 0;
+}
+}
+class A extends Bank{
+int getBalance()
+{
+return 1000;
+}
+}
+class B extends Bank{
+int getBalance()
+{
+return 1500;
+}
+}
+class C extends Bank{
+int getBalance()
+{
+return 2000;
+}
+}
+class Main{
+public static void main(String args[]){
+A a=new A();
+B b=new B();
+C c=new C();
+System.out.println("BALANCE OF BANK A IS : "+a.getBalance());
+System.out.println("BALANCE OF BANK B IS : "+b.getBalance());
+System.out.println("BALANCE OF BANK C IS : "+c.getBalance());
+}
+}
